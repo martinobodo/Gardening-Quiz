@@ -1,16 +1,262 @@
-.initial-h1 {
-    color: rgb(255, 0, 0);
-    text-align: center;
+* {
+    padding: 0;
     font-family: sans-serif;
-    font-size: 2.5rem;
-    padding-bottom: 9rem;
-    
+    box-sizing: border-box;
 }
+/*background img for both page*/
 body {
-    background-image: url("/assets/images/quiz-background.png");
+    background-image: url("../images/my.resize.img.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 96vh;
     background-attachment: fixed;
+}
+/*main page background color and size for header and label input*/
+#username-form{
+    padding-bottom: 2rem; 
+    margin-top: 4rem;
+    border-radius: 10px;
+    background: #0a153266;
+}
+/*style the header in main page*/
+.first-h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+/*style header in second page*/
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+/*style input first page*/
+.first-enter {
+    padding: 2px;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+#username {
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+#username:hover {
+    background: #ad9696;
+    color: rgb(255, 255, 255);
+}
+/*style for both input*/
+#form {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: center;
+}
+/*style button (Start Quiz)*/
+#btn {
+    width: 6.5rem;
+    margin-top: 0.5rem;
+    padding: 3.5px 7.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-left: 1rem;
+}
+
+#btn:hover {
+    background: #ad9696;
+    color: rgb(253, 244, 244);
+}
+
+.app {
+    /*style background of queation area*/
+    background: #0a153266;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 30px;
+}
+/*style header in questions area*/
+.app h1 {
+    font-size: 23px;
+    color: #feffff;
+    font-weight: 600;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 30px;
+}
+/*space between header and questions*/
+.quiz {
+    padding: 20px 0;
+}
+/*style for questions*/
+.quiz h2 {
+    font-size: 11px;
+    color: #f9f9f9;
+    font-weight: 600;
+}
+/*style the buttons*/
+.btn {
+    background: rgb(246, 244, 244);
+    color: #222020;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid rgb(18, 14, 14);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #343030;
+    color: rgb(253, 244, 244);
+}
+/*button when is not interactable */
+.btn:disabled {
+    cursor: no-drop;
+}
+/*style the button (Next)*/
+#next-btn {
+    background: #001e4d;
+    color: #ffffff;
+    font-weight: 500;
+    width: 7.25em;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+}
+/*color for questins if correct*/
+.correct {
+    background: #8ee0b1;
+}
+/*color for questins if wrong*/
+.incorrect {
+    background: #fa8f8f;
+}
+/*color style for timer in second page*/
+#timer {
+    color: #79e36b;
+  }
+
+@media (min-width: 320px) {
+    .quiz h2 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 390px) {
+    #username-form {
+        padding-bottom: 2rem; 
+        margin-top: 4rem;
+        background: #0a153266;
+    }
+    
+    #btn {
+        width: 6.5rem;
+        margin-top: 0.5rem;
+        padding: 3.5px 7.5px;
+        margin-left: 1rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .first-h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    #username-form{
+        padding-bottom: 2rem; 
+        margin: 4rem 4rem 0 4rem;
+        background: #0a153266;
+    }
+    
+    #btn {
+        width: 6.5rem;
+        margin-top: 0.5rem;
+        padding: 3.5px 7.5px;
+        margin-left: 1rem;
+    }
+
+    .app h1 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 576px) {
+    #username-form{
+        padding-bottom: 2rem; 
+        margin-top: 4rem;
+        border-radius: 10px;
+        background: #0a153266;
+    }
+    
+    .quiz h2 {
+        font-size: 16px;
+    }
+
+    .app h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #username-form{
+        padding-bottom: 2rem; 
+        margin: 4rem 10rem 0 10rem;
+        }
+    
+    .first-h1 {
+        font-size: 3.8rem;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    .quiz h2 {
+        font-size: 18px;
+    }
+
+    .app h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+/*larger devices (laptops desktop, 992px and up)*/
+@media screen and (min-width: 992px) { 
+    .quiz h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #username-form{
+        padding-bottom: 2rem; 
+        margin: 4rem 15rem 0 15rem;
+        }
+    .first-h1 {
+        font-size: 5.8rem;
+    }
+
+    .quiz h2 {
+        font-size: 20px;
+    }
 }
