@@ -5,7 +5,7 @@
 }
 /*background img for both page*/
 body {
-    background-image: url("../images/my.resize.img.jpg");
+    background-image: url("../images/quiz-background.png");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
